@@ -29,8 +29,8 @@ zh_vocab.create(zh_valid, zh)
 en_vocab.create(en_train, en)
 en_vocab.create(en_valid, en)
 
-zh_vocab.save('../dataset/zh_vocab.pkl')
-en_vocab.save('../dataset/en_vocab.pkl')
+zh_vocab.save('dataset/zh_vocab.pkl')
+en_vocab.save('dataset/en_vocab.pkl')
 ```
 
 ### 训练模型
