@@ -1,0 +1,192 @@
+2021-03-14 12:16:33,985 [INFO]: Transformer(
+  (encoder): Encoder(
+    (word_embeddings): WordEmbeddings(41694, 256)
+    (pe): PositionEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0): EncoderLayer(
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (decoder): Decoder(
+    (word_embeddings): WordEmbeddings(33222, 256)
+    (pe): PositionEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0): DecoderLayer(
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (self_attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (self_attention_dropout): Dropout(p=0.1, inplace=False)
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): DecoderLayer(
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (self_attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (self_attention_dropout): Dropout(p=0.1, inplace=False)
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): DecoderLayer(
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=256, out_features=256, bias=True)
+          (fc_k): Linear(in_features=256, out_features=256, bias=True)
+          (fc_v): Linear(in_features=256, out_features=256, bias=True)
+          (fc_o): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=256, out_features=512, bias=True)
+          (fc_2): Linear(in_features=512, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (self_attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (attention_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (self_attention_dropout): Dropout(p=0.1, inplace=False)
+        (attention_dropout): Dropout(p=0.1, inplace=False)
+        (ff_dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (fc): Linear(in_features=256, out_features=33222, bias=True)
+)
+Trainable parameters: 31670214
+2021-03-14 12:16:34,263 [INFO]: Train Epoch: 1, 1/5292 (0%), Loss: 9.918913
+2021-03-14 12:16:34,315 [INFO]: Train Epoch: 1, 2/5292 (0%), Loss: 9.479442
+2021-03-14 12:16:34,371 [INFO]: Train Epoch: 1, 3/5292 (0%), Loss: 9.321543
+2021-03-14 12:16:34,429 [INFO]: Train Epoch: 1, 4/5292 (0%), Loss: 9.078693
+2021-03-14 12:16:34,480 [INFO]: Train Epoch: 1, 5/5292 (0%), Loss: 8.875401
+2021-03-14 12:16:34,538 [INFO]: Train Epoch: 1, 6/5292 (0%), Loss: 8.628284
+2021-03-14 12:16:34,586 [INFO]: Train Epoch: 1, 7/5292 (0%), Loss: 8.370884
+2021-03-14 12:16:34,639 [INFO]: Train Epoch: 1, 8/5292 (0%), Loss: 8.125308
+2021-03-14 12:16:34,689 [INFO]: Train Epoch: 1, 9/5292 (0%), Loss: 7.855877
+2021-03-14 12:16:34,745 [INFO]: Train Epoch: 1, 10/5292 (0%), Loss: 7.784646
+2021-03-14 12:16:34,820 [INFO]: Train Epoch: 1, 11/5292 (0%), Loss: 7.416469
+2021-03-14 12:16:34,870 [INFO]: Train Epoch: 1, 12/5292 (0%), Loss: 7.485564
+2021-03-14 12:16:34,922 [INFO]: Train Epoch: 1, 13/5292 (0%), Loss: 7.251991
+2021-03-14 12:16:34,985 [INFO]: Train Epoch: 1, 14/5292 (0%), Loss: 7.290051
+2021-03-14 12:16:35,036 [INFO]: Train Epoch: 1, 15/5292 (0%), Loss: 7.256043
+2021-03-14 12:16:35,086 [INFO]: Train Epoch: 1, 16/5292 (0%), Loss: 6.885080
+2021-03-14 12:16:35,136 [INFO]: Train Epoch: 1, 17/5292 (0%), Loss: 6.989044
+2021-03-14 12:16:35,202 [INFO]: Train Epoch: 1, 18/5292 (0%), Loss: 7.101544
+2021-03-14 12:16:35,250 [INFO]: Train Epoch: 1, 19/5292 (0%), Loss: 6.997925
+2021-03-14 12:16:35,355 [INFO]: Train Epoch: 1, 21/5292 (0%), Loss: 6.977947
+2021-03-14 12:16:35,423 [INFO]: Train Epoch: 1, 22/5292 (0%), Loss: 7.028292
+2021-03-14 12:16:35,480 [INFO]: Train Epoch: 1, 23/5292 (0%), Loss: 7.067587
+2021-03-14 12:16:35,535 [INFO]: Train Epoch: 1, 24/5292 (0%), Loss: 7.109526
+2021-03-14 12:16:35,589 [INFO]: Train Epoch: 1, 25/5292 (0%), Loss: 6.984996
+2021-03-14 12:16:35,643 [INFO]: Train Epoch: 1, 26/5292 (0%), Loss: 6.990751
+2021-03-14 12:16:35,695 [INFO]: Train Epoch: 1, 27/5292 (1%), Loss: 7.130370
+2021-03-14 12:16:35,742 [INFO]: Train Epoch: 1, 28/5292 (1%), Loss: 6.830204
+2021-03-14 12:16:35,791 [INFO]: Train Epoch: 1, 29/5292 (1%), Loss: 6.837221
+2021-03-14 12:16:35,843 [INFO]: Train Epoch: 1, 30/5292 (1%), Loss: 6.948296
+2021-03-14 12:16:35,891 [INFO]: Train Epoch: 1, 31/5292 (1%), Loss: 6.751539
+2021-03-14 12:16:35,940 [INFO]: Train Epoch: 1, 32/5292 (1%), Loss: 6.836367
+2021-03-14 12:16:35,986 [INFO]: Train Epoch: 1, 33/5292 (1%), Loss: 6.710196
+2021-03-14 12:16:36,039 [INFO]: Train Epoch: 1, 34/5292 (1%), Loss: 6.873942
+2021-03-14 12:16:36,093 [INFO]: Train Epoch: 1, 35/5292 (1%), Loss: 6.684680
+2021-03-14 12:16:36,140 [INFO]: Train Epoch: 1, 36/5292 (1%), Loss: 6.880458
+2021-03-14 12:16:36,193 [INFO]: Train Epoch: 1, 37/5292 (1%), Loss: 6.919129
+2021-03-14 12:16:36,242 [INFO]: Train Epoch: 1, 38/5292 (1%), Loss: 6.721412

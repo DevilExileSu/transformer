@@ -1,0 +1,42 @@
+2021-03-14 12:16:29,011 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.005
+	optimizer : adam
+	l2 : 0.0
+	epochs : 100
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : False
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2021-03-14 12:16:29,012 [DEBUG]: Config saved to file ./config.json
+2021-03-14 12:16:29,067 [DEBUG]: -----------read data-----------
+2021-03-14 12:16:29,909 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2021-03-14 12:16:29,909 [DEBUG]: -----------preprocess data-----------
+2021-03-14 12:16:31,689 [DEBUG]: -----------read data-----------
+2021-03-14 12:16:31,701 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2021-03-14 12:16:31,701 [DEBUG]: -----------preprocess data-----------
