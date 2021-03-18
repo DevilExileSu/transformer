@@ -56,7 +56,7 @@ parser.add_argument('--cuda', type=bool, default=torch.cuda.is_available())
 parser.add_argument('--config_file', type=str, default='./config.json')
 parser.add_argument('--seed', type=int, default=1234)
 
-args = vars(parser.parse_args())
+args = parser.parse_args()
 logger = Logger()
 
 cfg = Config(logger=logger, args=args)
