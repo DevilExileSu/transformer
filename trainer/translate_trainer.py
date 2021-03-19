@@ -47,7 +47,7 @@ class TranslateTrainer(Trainer):
             torch.nn.utils.clip_grad_norm_(self.model.parameters(), 5)
             self.optimizer.step()
             total_loss += loss.item()
-            if idx % self.log_step:
+            if idx % self.log_step == 0:
                 self.logger.info('Train Epoch: {}, {}/{} ({:.0f}%), Loss: {:.6f}'.format(epoch, 
                             idx, 
                             len(self.data_loader), 
