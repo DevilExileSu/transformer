@@ -48,7 +48,7 @@ class Vocab(object):
         tmp = self.vocab.most_common()
         tokens = ['<pad>', '<sos>', '<eos>', '<unk>']
         tokens += [i[0] for i in tmp if i[1] > self.min_freq]
-        self.word2id = {word:idx for idx, word in enumerate(word2id)}
+        self.word2id = {word:idx for idx, word in enumerate(tokens)}
         self.id2word = {idx:word for word, idx in self.word2id.items()}
         self.vocab_size = len(self.word2id)
 
