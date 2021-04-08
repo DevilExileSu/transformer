@@ -97,6 +97,5 @@ criterion = nn.CrossEntropyLoss(ignore_index=trg_vocab.word2id['<pad>'])
 #trainer
 trainer = TranslateTrainer(model=model, optimizer=optimizer, criterion=criterion, cfg=cfg.config, logger=logger, 
                         data_loader=train_data_loader, valid_data_loader=valid_data_loader, lr_scheduler=None)
-torch.cuda.set_device(0)
 trainer.train()
 
