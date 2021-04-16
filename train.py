@@ -3,8 +3,8 @@ import argparse
 import numpy as np
 import torch.nn as nn
 from torch.nn import functional as F
-from config import Config,Logger
-from utils.util import get_optimizer
+from config import Config, Logger
+from utils.util import get_optimizer, initialize_weights
 from utils.vocab import Vocab
 from torch.optim.lr_scheduler import LambdaLR
 from model import Transformer
@@ -95,6 +95,7 @@ optimizer = get_optimizer(cfg.config['optimizer'], param, lr=cfg.config['lr'])
 criterion = nn.CrossEntropyLoss(ignore_index=trg_vocab.word2id['<pad>'])
 
 #trainer
+model.apply(initialize_weights)
 trainer = TranslateTrainer(model=model, optimizer=optimizer, criterion=criterion, cfg=cfg.config, logger=logger, 
                         data_loader=train_data_loader, valid_data_loader=valid_data_loader, lr_scheduler=None)
 trainer.train()
