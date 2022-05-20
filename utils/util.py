@@ -83,3 +83,7 @@ def make_trg_mask(trg, vocab, device):
     trg_sub_mask = torch.tril(torch.ones((trg_len, trg_len), device=device)).bool()
     trg_mask = trg_pad_mask & trg_sub_mask
     return trg_mask
+
+def initialize_weights(model):
+    if hasattr(model, 'weight') and model.weight.dim() > 1:
+        nn.init.xavier_uniform_(model.weight.data)
