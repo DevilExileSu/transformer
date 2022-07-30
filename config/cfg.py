@@ -5,9 +5,9 @@ import argparse
 
 
 class Config(object):
-    def __init__(self, logger, args = None):
+    def __init__(self, logger, args):
         self.logger = logger
-        self.config = args if isinstance(args, dict) else None
+        self.config = vars(args)
         
     def save_config(self, path):
         with open(path, 'w') as f:
