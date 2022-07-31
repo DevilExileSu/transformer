@@ -45,7 +45,7 @@ if __name__ == "__main__":
     trg_vocab = Vocab()
     
     logger = Logger()
-    cfg = Config(logger)
+    cfg = Config(logger, args)
     cfg.load_config('config.json')
     src_vocab.load(cfg.config['src_vocab'])
     trg_vocab.load(cfg.config['trg_vocab'])
