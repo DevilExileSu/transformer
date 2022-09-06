@@ -35,7 +35,7 @@ en_vocab.save('dataset/en_vocab.pkl')
 
 ### 训练模型
 ```python 
-python train.py --batch_size 32 --h_dim 256 --lr 0.0005 --epochs 10
+python train.py --batch_size 32 --h_dim 256 --lr 0.0005 --epochs 50
 ```
 
 
@@ -43,9 +43,9 @@ python train.py --batch_size 32 --h_dim 256 --lr 0.0005 --epochs 10
 ```python 
 python test.py --sent 这是一个例子
 """
-2021-03-14 12:09:39,281 [DEBUG]: Config loaded from file config.json
+2022-09-06 23:57:53,928 [DEBUG]: Config loaded from file config.json
 这是一个例子
 ['<sos>', '这是', '一个', '例子', '<eos>']
-['<sos>', 'this', 'is', 'a', 'example', '<eos>']
+['<sos>', 'this', 'is', 'a', 'example', 'of', 'this', 'example', '<eos>']
 """
 ```

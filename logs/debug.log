@@ -1,4 +1,4 @@
-2021-03-14 12:16:29,011 [DEBUG]: 
+2022-09-06 11:07:23,658 [DEBUG]: 
 Running with the following configs:
 	src_train_data : dataset/train.zh.token
 	trg_train_data : dataset/train.en.token
@@ -20,7 +20,7 @@ Running with the following configs:
 	lr : 0.005
 	optimizer : adam
 	l2 : 0.0
-	epochs : 100
+	epochs : 20
 	save_dir : ./saved_models
 	save_epochs : 5
 	early_stop : True
@@ -33,10 +33,306 @@ Running with the following configs:
 	seed : 1234
 
 
-2021-03-14 12:16:29,012 [DEBUG]: Config saved to file ./config.json
-2021-03-14 12:16:29,067 [DEBUG]: -----------read data-----------
-2021-03-14 12:16:29,909 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
-2021-03-14 12:16:29,909 [DEBUG]: -----------preprocess data-----------
-2021-03-14 12:16:31,689 [DEBUG]: -----------read data-----------
-2021-03-14 12:16:31,701 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
-2021-03-14 12:16:31,701 [DEBUG]: -----------preprocess data-----------
+2022-09-06 11:07:23,658 [DEBUG]: Config saved to file ./config.json
+2022-09-06 11:07:23,739 [DEBUG]: -----------read data-----------
+2022-09-06 11:07:24,683 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 11:07:24,684 [DEBUG]: -----------preprocess data-----------
+2022-09-06 11:07:26,802 [DEBUG]: -----------read data-----------
+2022-09-06 11:07:26,816 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 11:07:26,817 [DEBUG]: -----------preprocess data-----------
+2022-09-06 11:12:26,775 [DEBUG]: start validation
+2022-09-06 11:12:30,323 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:17:25,688 [DEBUG]: start validation
+2022-09-06 11:17:29,746 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:22:27,167 [DEBUG]: start validation
+2022-09-06 11:22:30,917 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:27:27,234 [DEBUG]: start validation
+2022-09-06 11:27:31,317 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:32:28,975 [DEBUG]: start validation
+2022-09-06 11:32:32,797 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:37:37,278 [DEBUG]: start validation
+2022-09-06 11:37:41,017 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:42:38,536 [DEBUG]: start validation
+2022-09-06 11:42:42,527 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 11:44:17,306 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:12:04,461 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:12:32,256 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:13:01,931 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:13:33,710 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.0005
+	optimizer : adam
+	l2 : 0.0
+	epochs : 20
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : True
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2022-09-06 15:13:33,710 [DEBUG]: Config saved to file ./config.json
+2022-09-06 15:13:33,807 [DEBUG]: -----------read data-----------
+2022-09-06 15:13:36,228 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 15:13:36,228 [DEBUG]: -----------preprocess data-----------
+2022-09-06 15:13:38,497 [DEBUG]: -----------read data-----------
+2022-09-06 15:13:38,513 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 15:13:38,513 [DEBUG]: -----------preprocess data-----------
+2022-09-06 15:13:41,775 [DEBUG]: Loading checkpoint: ./saved_models/model_best.pt...
+2022-09-06 15:13:42,088 [DEBUG]: Checkpoint loaded. Resume training from epoch 9
+2022-09-06 15:18:58,251 [DEBUG]: start validation
+2022-09-06 15:19:02,149 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:24:15,525 [DEBUG]: start validation
+2022-09-06 15:24:19,428 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:29:29,529 [DEBUG]: start validation
+2022-09-06 15:29:33,486 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:34:49,279 [DEBUG]: start validation
+2022-09-06 15:34:53,266 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:40:07,830 [DEBUG]: start validation
+2022-09-06 15:40:11,745 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:45:22,803 [DEBUG]: start validation
+2022-09-06 15:45:26,707 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:47:37,845 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:47:55,941 [DEBUG]: Config loaded from file config.json
+2022-09-06 15:48:11,351 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.05
+	optimizer : adam
+	l2 : 0.0
+	epochs : 20
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : True
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2022-09-06 15:48:11,351 [DEBUG]: Config saved to file ./config.json
+2022-09-06 15:48:11,437 [DEBUG]: -----------read data-----------
+2022-09-06 15:48:12,693 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 15:48:12,693 [DEBUG]: -----------preprocess data-----------
+2022-09-06 15:48:14,974 [DEBUG]: -----------read data-----------
+2022-09-06 15:48:14,989 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 15:48:14,989 [DEBUG]: -----------preprocess data-----------
+2022-09-06 15:48:18,139 [DEBUG]: Loading checkpoint: ./saved_models/model_best.pt...
+2022-09-06 15:48:18,417 [DEBUG]: Checkpoint loaded. Resume training from epoch 16
+2022-09-06 15:53:32,109 [DEBUG]: start validation
+2022-09-06 15:53:36,056 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 15:58:48,139 [DEBUG]: start validation
+2022-09-06 15:58:52,033 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:03:58,315 [DEBUG]: start validation
+2022-09-06 16:04:02,232 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:09:10,135 [DEBUG]: start validation
+2022-09-06 16:09:14,021 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:14:20,513 [DEBUG]: start validation
+2022-09-06 16:14:24,401 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:15:20,097 [DEBUG]: Config loaded from file config.json
+2022-09-06 16:15:50,581 [DEBUG]: Config loaded from file config.json
+2022-09-06 16:17:08,718 [DEBUG]: Config loaded from file config.json
+2022-09-06 16:17:27,135 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.05
+	optimizer : adam
+	l2 : 0.0
+	epochs : 30
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : True
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2022-09-06 16:17:27,135 [DEBUG]: Config saved to file ./config.json
+2022-09-06 16:17:27,221 [DEBUG]: -----------read data-----------
+2022-09-06 16:17:28,611 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 16:17:28,611 [DEBUG]: -----------preprocess data-----------
+2022-09-06 16:17:30,887 [DEBUG]: -----------read data-----------
+2022-09-06 16:17:30,903 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 16:17:30,903 [DEBUG]: -----------preprocess data-----------
+2022-09-06 16:17:34,108 [DEBUG]: Loading checkpoint: ./saved_models/model_best.pt...
+2022-09-06 16:17:34,384 [DEBUG]: Checkpoint loaded. Resume training from epoch 22
+2022-09-06 16:22:50,490 [DEBUG]: start validation
+2022-09-06 16:22:54,354 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:28:05,821 [DEBUG]: start validation
+2022-09-06 16:28:09,709 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:33:19,684 [DEBUG]: start validation
+2022-09-06 16:33:23,691 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:38:28,908 [DEBUG]: start validation
+2022-09-06 16:38:32,861 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:43:43,246 [DEBUG]: start validation
+2022-09-06 16:43:47,150 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:48:55,672 [DEBUG]: start validation
+2022-09-06 16:48:59,605 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:54:03,074 [DEBUG]: start validation
+2022-09-06 16:54:06,962 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 16:59:17,985 [DEBUG]: start validation
+2022-09-06 16:59:21,902 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:04:31,439 [DEBUG]: start validation
+2022-09-06 17:04:35,467 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:05:39,710 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:06:06,512 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:06:26,316 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:06:39,339 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:07:45,443 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:09:23,220 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.0005
+	optimizer : adam
+	l2 : 0.0
+	epochs : 50
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : False
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2022-09-06 17:09:23,220 [DEBUG]: Config saved to file ./config.json
+2022-09-06 17:09:23,303 [DEBUG]: -----------read data-----------
+2022-09-06 17:09:24,645 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 17:09:24,645 [DEBUG]: -----------preprocess data-----------
+2022-09-06 17:09:26,893 [DEBUG]: -----------read data-----------
+2022-09-06 17:09:26,908 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 17:09:26,908 [DEBUG]: -----------preprocess data-----------
+2022-09-06 17:09:55,094 [DEBUG]: 
+Running with the following configs:
+	src_train_data : dataset/train.zh.token
+	trg_train_data : dataset/train.en.token
+	src_valid_data : dataset/val.zh.token
+	trg_valid_data : dataset/val.en.token
+	src_vocab : dataset/zh_vocab.pkl
+	trg_vocab : dataset/en_vocab.pkl
+	shuffle : True
+	batch_size : 32
+	h_dim : 256
+	enc_n_layers : 3
+	dec_n_layers : 3
+	enc_n_heads : 8
+	dec_n_heads : 8
+	enc_dropout : 0.1
+	dec_dropout : 0.1
+	enc_pf_dim : 512
+	dec_pf_dim : 512
+	lr : 0.0005
+	optimizer : adam
+	l2 : 0.0
+	epochs : 50
+	save_dir : ./saved_models
+	save_epochs : 5
+	early_stop : True
+	patience : 10
+	resume : True
+	resume_path : ./saved_models/model_best.pt
+	log_step : 20
+	cuda : True
+	config_file : ./config.json
+	seed : 1234
+
+
+2022-09-06 17:09:55,095 [DEBUG]: Config saved to file ./config.json
+2022-09-06 17:09:55,207 [DEBUG]: -----------read data-----------
+2022-09-06 17:09:56,109 [DEBUG]: dataset/train.zh.token and dataset/train.en.token has data 169337
+2022-09-06 17:09:56,109 [DEBUG]: -----------preprocess data-----------
+2022-09-06 17:09:58,250 [DEBUG]: -----------read data-----------
+2022-09-06 17:09:58,264 [DEBUG]: dataset/val.zh.token and dataset/val.en.token has data 8000
+2022-09-06 17:09:58,264 [DEBUG]: -----------preprocess data-----------
+2022-09-06 17:10:01,252 [DEBUG]: Loading checkpoint: ./saved_models/model_best.pt...
+2022-09-06 17:10:01,549 [DEBUG]: Checkpoint loaded. Resume training from epoch 32
+2022-09-06 17:15:17,925 [DEBUG]: start validation
+2022-09-06 17:15:21,762 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:20:12,755 [DEBUG]: start validation
+2022-09-06 17:20:16,386 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:25:20,786 [DEBUG]: start validation
+2022-09-06 17:25:24,588 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:30:26,445 [DEBUG]: start validation
+2022-09-06 17:30:30,490 [DEBUG]: Saving current best: ./saved_models/model_best.pt...
+2022-09-06 17:31:36,180 [DEBUG]: Config loaded from file config.json
+2022-09-06 17:31:52,297 [DEBUG]: Config loaded from file config.json

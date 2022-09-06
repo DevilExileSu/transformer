@@ -3,25 +3,31 @@ import torch.nn as nn
 from model.base_model import BaseModel
 from model.attention import MultiHeadAttentionLayer
 from model.feed_forward import PositionwiseFeedforwardLayer
-from model.embeddings import WordEmbeddings, PositionEncoder
+from model.embeddings import WordEmbeddings, PositionEncoder, PositionEmbeddings
 
 class Decoder(BaseModel):
-    def __init__(self, vocab_size, h_dim, pf_dim, n_heads, n_layers, dropout, device):
+    def __init__(self, vocab_size, h_dim, pf_dim, n_heads, n_layers, dropout, device, max_seq_len=200):
         super().__init__()
         self.n_layers = n_layers
         self.h_dim = h_dim
         self.device = device
         self.word_embeddings = WordEmbeddings(vocab_size, h_dim)
         
-        self.pe = PositionEncoder(h_dim, device, dropout=dropout)
+        # self.pe = PositionEncoder(h_dim, device, dropout=dropout)
+        self.pe = PositionEmbeddings(max_seq_len, h_dim)
         self.layers = nn.ModuleList()
+        self.dropout = nn.Dropout(dropout)
+        self.scale = torch.sqrt(torch.FloatTensor([h_dim])).to(device)
 
         for i in range(n_layers):
             self.layers.append(DecoderLayer(h_dim, pf_dim, n_heads, dropout, device))
 
     def forward(self, target, encoder_output, src_mask, target_mask):
-        output = self.word_embeddings(target)
-        output = self.pe(output)
+        output = self.word_embeddings(target) * self.scale
+
+        tar_len = target.shape[1]
+        pos = torch.arange(0, tar_len).unsqueeze(0).repeat(target.shape[0], 1).to(self.device)
+
         for i in range(self.n_layers):
             output = self.layers[i](output, encoder_output, src_mask, target_mask)
         

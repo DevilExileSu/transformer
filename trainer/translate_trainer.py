@@ -44,7 +44,8 @@ class TranslateTrainer(Trainer):
             loss = self.criterion(output, trg)
             
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(self.model.parameters(), 5)
+            # 可调参数 1 可以改为 其他值进行尝试
+            torch.nn.utils.clip_grad_norm_(self.model.parameters(), 1)
             self.optimizer.step()
             total_loss += loss.item()
             if idx % self.log_step == 0:
