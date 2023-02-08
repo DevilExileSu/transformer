@@ -39,6 +39,7 @@ python train.py --batch_size 32 --h_dim 256 --lr 0.0005 --epochs 50
 ```
 
 这是 README 中测试使用到的模型参数，可以下载替换使用。
+
 链接：https://pan.baidu.com/s/18D9UXTYeIYmOy3dfPVopZw 
 提取码：sxho
 
